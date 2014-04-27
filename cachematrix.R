@@ -1,5 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Put comments here that give an overall description of what your functions do
+
 ## Below R function is a demostration of how to calculate the inverse of matrix and use the cache to reduce the recursive computing time by using the inverse from the cache value assuming that the matrix remains the same.
 
 ## Write a short comment describing this function
@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
         inversematrix = NULL
         
         # set value of matrix from user input y
-        set <- function( y ) {
+        set <- function(y) {
                 
                 # sets to global x value of matrix input y 
                 x <<- y
@@ -35,7 +35,7 @@ makeCacheMatrix <- function(x = matrix()) {
         # get value of the inversematrix
         getinverse <- function() inversematrix
 
-        list( set = set, get = get, setinverse = setinverse, getinverse = getinverse)
+        list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 
 }
 
@@ -62,7 +62,7 @@ cacheSolve <- function(x, ...) {
         invertiblematrix <- x$get()
         inversematrix <- solve(invertiblematrix, ...)
         
-        ##set mean to cached value
+        ##set inverse to cached value
         x$setinverse(inversematrix)
         
         ## Return a matrix that is the inverse of 'x'

@@ -1,8 +1,10 @@
 ## Put comments here that give an overall description of what your functions do
 
-## Below R function is a demostration of how to calculate the inverse of matrix and use the cache to reduce the recursive computing time by using the inverse from the cache value assuming that the matrix remains the same.
+## Below R function is a demostration of how to calculate the inverse of matrix and 
+## use the cache to reduce the recursive computing time by using the inverse 
+## from the cache value assuming that the matrix remains the same.
 
-## Write a short comment describing this function
+## Write a short comment describing this functionmakeCacheMatrix
 
 ##Function makeCacheMatrix()  creates a special vector, which is really a list containing a function to 
 ## 1. set the value of the matrix
@@ -41,8 +43,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-## Function cachesolve calculates the inverse of the special matrix created using the above function. It first checks if the inverse is already calculated.If yes, then it would use and get  inverse from the cache else would calculate the inverse and then set the value of the inverse using setinverse.	  
-
+## Function cachesolve calculates the inverse of the special matrix created in the makeCacheMatrix function.
+##  It first checks if the inverse is already calculated. If yes, then it would use and get inverse from the cache using getinverse function 
+## else would calculate the inverse and then set the value of the inverse using setinverse.	  
+## finally the function will return the inverse matrix
 
 cacheSolve <- function(x, ...) {
 
